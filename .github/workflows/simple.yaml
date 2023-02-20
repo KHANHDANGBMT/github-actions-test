@@ -2,10 +2,10 @@ name: Shell command
 
 on: [push]
 
-jobs: 
-  run-shell-command:
+jobs: #Jobs is an object and each key in this object is an job
+  run-shell-command: # this is one job with name run-shell-command and the config was organized by the object, we have a bunch of action here. Each job like a virtual machine so it needs to be run on an defined system.
     runs-on: ubuntu-latest
-    steps:
+    steps: # array of object and each object represents a step. we will walk through these steps when the "on" command is triggered.
       - name: echo a string
         run: echo "Hello, world!"
       - name: Multiple scripts
