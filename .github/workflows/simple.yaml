@@ -19,6 +19,7 @@ jobs: #Jobs is an object and each key in this object is an job
         shell: python
   run-window-command:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: Directory powershell
         run: Get-Location
