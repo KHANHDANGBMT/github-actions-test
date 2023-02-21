@@ -12,3 +12,8 @@ jobs: #Jobs is an object and each key in this object is an job
         run: |
           node -v
           npm -v
+      - name: python-shell
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
