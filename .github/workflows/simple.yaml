@@ -17,3 +17,11 @@ jobs: #Jobs is an object and each key in this object is an job
           import platform
           print(platform.processor())
         shell: python
+  run-window-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory powershell
+        run: Get-Location
+      - name: Diretory Bash
+        run: pwd
+        shell: bash
